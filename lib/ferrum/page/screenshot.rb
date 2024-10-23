@@ -207,6 +207,8 @@ module Ferrum
         clip = area_options(options[:full], options[:selector], scale, options[:area])
         screenshot_options.merge!(clip: clip) if clip
 
+        screenshot_options.merge!(captureBeyondViewport: options[:capture_beyond_viewport]) if options[:capture_beyond_viewport]
+
         screenshot_options
       end
 
